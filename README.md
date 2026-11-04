@@ -7,7 +7,7 @@ O Farol é um motor de conteúdo para LinkedIn, feito por um designer para desig
 - o **Desigma** monta tudo num projeto editável;
 - o **app local do Farol** cuida da parte que é sua: olhar, aprovar e publicar.
 
-**[Ver a demonstração online](https://farol-demo.vercel.app)** · **[Baixar para testar](https://github.com/AbapaOnSwamp/farol/releases/latest)**
+**[Ver a demonstração online](https://farol-otavio-guerra.vercel.app)** · **[Baixar para testar](https://github.com/AbapaOnSwamp/farol/releases/latest)**
 
 | Boas-vindas | Conexões | Aprovar |
 |---|---|---|

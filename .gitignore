@@ -19,3 +19,5 @@ Thumbs.db
 
 # pacotes gerados para release
 dist/
+
+.vercel
