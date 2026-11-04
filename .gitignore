@@ -1,0 +1,18 @@
+# segredos e configuração local: nunca sobem
+config/*
+!config/engine.config.example.json
+!config/linkedin.example.json
+*.token
+token.json
+.env
+.env.*
+
+# tudo que o motor gera (peças, aprovações, registro de publicações, logs)
+workspace/*
+!workspace/.gitkeep
+
+# dependências e lixo do sistema
+node_modules/
+.DS_Store
+Thumbs.db
+*.log

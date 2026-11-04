@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark" data-mood="neutral">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Farol</title>
+<meta name="engine-token" content="__TOKEN__">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23141b2b'/%3E%3Cpath d='M28 20h8l3 30H25z' fill='%23e8ecf5'/%3E%3Ccircle cx='32' cy='16' r='5' fill='%23ffb547'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="ambient" aria-hidden="true"><i class="glow g1"></i><i class="glow g2"></i></div>
+
+<header class="bar">
+  <span class="wordmark">Farol</span>
+  <div class="pill-zone" aria-live="polite"><div class="pill" id="pill" hidden><span class="dot"></span><span><b id="pill-t"></b><small id="pill-s"></small></span></div></div>
+  <nav class="seg" id="nav" aria-label="Seções" hidden>
+    <button data-view="fila" aria-current="page">Fila</button><button data-view="rotinas">Rotinas</button><button data-view="ajustes">Ajustes</button>
+  </nav>
+</header>
+
+<main id="stage">
+  <!-- ===================================== ONBOARDING (uma ideia por tela) -->
+  <section class="scene" data-scene="ola" hidden>
+    <div class="appicon" data-in><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M27 22h10l3.5 28h-17z" fill="currentColor"/><rect x="25" y="16" width="14" height="7" rx="2" fill="currentColor" opacity=".7"/><circle cx="32" cy="12" r="5" class="lamp"/></svg><span class="beam"></span></div>
+    <h1 class="hero" data-in>Farol</h1>
+    <p class="sub" data-in>Seus posts no ar, do seu jeito. Nada sai sem você.</p>
+    <div class="cta" data-in><button class="btn accent" data-next>Começar</button><span class="hint">ou Enter</span></div>
+  </section>
+
+  <section class="scene" data-scene="claude" hidden>
+    <h1 data-in>Primeiro, o Claude.</h1>
+    <p class="sub" data-in>Ele desenha as peças e monta as pautas, com a sua conta.</p>
+    <div class="orb" data-in data-orb="claude"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z" fill="currentColor"/></svg></div>
+    <dl class="facts" data-in data-facts="claude"></dl>
+    <div class="cta" data-in><button class="btn accent" data-act="claude-login">Entrar no Claude</button><button class="btn" data-act="recheck">Verificar</button><a class="link" href="https://docs.claude.com/en/docs/claude-code/setup" target="_blank" rel="noopener" data-install hidden>Como instalar</a></div>
+    <div class="cta small" data-in><button class="link" data-next>Continuar</button></div>
+  </section>
+
+  <section class="scene" data-scene="linkedin" hidden>
+    <h1 data-in>Agora, o LinkedIn.</h1>
+    <p class="sub" data-in>Um app seu, com as suas chaves. Elas ficam só nesta máquina.</p>
+    <details class="glass guide" data-in><summary>Como criar o app (uma vez só)</summary>
+      <ol>
+        <li>Abra <a href="https://www.linkedin.com/developers/apps/new" target="_blank" rel="noopener">linkedin.com/developers/apps/new</a>. O LinkedIn pede uma Página de empresa ligada ao app.</li>
+        <li>Em <b>Products</b>, adicione <b>Share on LinkedIn</b> e <b>Sign In with LinkedIn using OpenID Connect</b>.</li>
+        <li>Em <b>Auth</b>, adicione o redirect <kbd data-redirect>http://localhost:8765/callback</kbd> <button class="link" data-act="copy-redirect" type="button">copiar</button></li>
+        <li>Copie o Client ID e o Client Secret para cá.</li>
+      </ol>
+    </details>
+    <form class="fields" data-in data-form="linkedin-keys" autocomplete="off">
+      <label><span>Client ID</span><input name="client_id" spellcheck="false" placeholder="77abc12xyz"></label>
+      <label><span>Client Secret</span><input name="client_secret" type="password" spellcheck="false" placeholder="fica só aqui"></label>
+      <button class="btn" type="submit">Salvar</button>
+    </form>
+    <dl class="facts" data-in data-facts="linkedin"></dl>
+    <div class="cta" data-in><button class="btn accent" data-act="linkedin-connect">Conectar</button><button class="link" data-next>Continuar</button></div>
+  </section>
+
+  <section class="scene" data-scene="desigma" hidden>
+    <h1 data-in>O Desigma mora aqui.</h1>
+    <p class="sub" data-in>Cada peça vira um quadro no seu projeto, ao vivo. <a href="https://github.com/deepfounder-ai/desigma/releases" target="_blank" rel="noopener">Baixar o Desigma</a></p>
+    <form class="fields two" data-in data-form="desigma" autocomplete="off">
+      <label><span>desigma.exe</span><input name="exe" spellcheck="false"></label>
+      <label><span>desigma-mcp.exe</span><input name="mcpExe" spellcheck="false"></label>
+      <label><span>Pasta de trabalho</span><input name="workspace" spellcheck="false"></label>
+      <label><span>Projeto .desigma</span><input name="project" spellcheck="false"></label>
+      <button class="btn" type="submit">Salvar caminhos</button>
+    </form>
+    <dl class="facts" data-in data-facts="desigma"></dl>
+    <div class="cta" data-in><button class="btn accent" data-act="desigma-register">Registrar no Claude Code</button><button class="link" data-next>Continuar</button></div>
+  </section>
+
+  <section class="scene" data-scene="aprovar" hidden>
+    <h1 data-in data-title>Aperte <kbd>A</kbd> para aprovar.</h1>
+    <p class="sub" data-in data-sub>Âmbar é esperando você. Verde é no ar.</p>
+    <div class="strip demo" data-in data-demo></div>
+    <div class="keys" data-in><kbd data-k="a">A</kbd><span>aprova</span><kbd data-k="p">P</kbd><span>publica</span><kbd data-k="←">←</kbd><kbd data-k="→">→</kbd><span>navega</span></div>
+    <div class="cta small" data-in><button class="link" data-next>Continuar</button></div>
+  </section>
+
+  <section class="scene" data-scene="jeito" hidden>
+    <h1 data-in>Do seu jeito.</h1>
+    <p class="sub" data-in>Tudo vale na hora.</p>
+    <div class="glass status-demo" data-in><span class="orb mini" data-mood-orb></span><span><b>Esperando você</b><small>3 posts na fila</small></span></div>
+    <div class="prefs" data-in>
+      <div class="pref"><span>Tema</span><div class="chips" data-pref="theme"><button data-v="auto">Automático</button><button data-v="light">Claro</button><button data-v="dark">Escuro</button></div></div>
+      <div class="pref"><span>Som</span><div class="chips" data-pref="sound"><button data-v="tom">Tom</button><button data-v="clique">Clique suave</button><button data-v="bipe">Bipe duplo</button><button data-v="off">Sem som</button></div></div>
+      <div class="pref"><span>Aviso na tela</span><div class="chips" data-pref="toast"><button data-v="compacto">Compacto</button><button data-v="padrao">Padrão</button><button data-v="detalhado">Detalhado</button></div></div>
+    </div>
+    <div class="cta" data-in><button class="btn accent" data-next>Pronto</button><span class="hint">ou Enter</span></div>
+  </section>
+
+  <section class="scene" data-scene="truques" hidden>
+    <h1 data-in>Mais três truques. <span class="soft">Quando quiser.</span></h1>
+    <div class="tricks" data-in>
+      <article class="glass trick"><div class="mini-art"><span class="orb mini" style="--c:var(--violet)"></span></div><h3>Daily UI do dia</h3><p>O Claude desenha a tela e espera a sua aprovação.</p><button class="link" data-run="daily-ui">Gerar agora</button></article>
+      <article class="glass trick"><div class="mini-art cards3"><i></i><i></i><i></i></div><h3>Carrosséis de notícias</h3><p>Pauta checada em fonte primária, dois por dia.</p><button class="link" data-run="pauta-noticias">Montar agora</button></article>
+      <article class="glass trick"><div class="mini-art"><kbd>08:00</kbd></div><h3>Agendar</h3><p>Tarefas no app do Claude ou no Agendador do Windows.</p><button class="link" data-goto="rotinas">Ver como</button></article>
+    </div>
+    <div class="cta" data-in><button class="btn accent" data-finish>Abrir a fila</button><span class="hint">ou Enter</span></div>
+  </section>
+
+  <!-- ===================================== APP -->
+  <section class="scene view" data-scene="fila" hidden>
+    <h1 data-in data-fila-title>Carregando a fila…</h1>
+    <p class="sub" data-in data-fila-sub></p>
+    <div class="filters chips" data-in data-filter><button data-v="pendente">Esperando</button><button data-v="pronto">Aprovados</button><button data-v="publicado">No ar</button><button data-v="todos">Todos</button></div>
+    <div class="strip" data-in data-strip tabindex="0" aria-label="Posts"></div>
+    <article class="glass detail" data-in data-detail></article>
+  </section>
+
+  <section class="scene view" data-scene="rotinas" hidden>
+    <h1 data-in>Rotinas do dia.</h1>
+    <p class="sub" data-in>O Claude gera e para antes de publicar. O resto é com você.</p>
+    <div class="tricks" data-in data-rotinas></div>
+    <article class="glass sched" data-in><h3>Agendar no Windows</h3><pre><code data-sched></code></pre></article>
+  </section>
+
+  <section class="scene view" data-scene="ajustes" hidden>
+    <h1 data-in>Ajustes.</h1>
+    <p class="sub" data-in>Conexões, caminhos e o jeito do Farol.</p>
+    <div class="tricks" data-in>
+      <article class="glass trick conn" data-conn="claude"><span class="orb mini"></span><h3>Claude</h3><p data-conn-t></p><button class="link" data-goscene="claude">Abrir</button></article>
+      <article class="glass trick conn" data-conn="linkedin"><span class="orb mini"></span><h3>LinkedIn</h3><p data-conn-t></p><button class="link" data-goscene="linkedin">Abrir</button></article>
+      <article class="glass trick conn" data-conn="desigma"><span class="orb mini"></span><h3>Desigma</h3><p data-conn-t></p><button class="link" data-goscene="desigma">Abrir</button></article>
+    </div>
+    <form class="fields two" data-in data-form="config" autocomplete="off">
+      <label><span>Pasta de imagens</span><input name="assetsDir" spellcheck="false"></label>
+      <label><span>Dia 1 do Daily UI</span><input name="dailyUiStart" type="date"></label>
+      <button class="btn" type="submit">Salvar</button>
+    </form>
+    <div class="cta small" data-in><button class="link" data-goscene="jeito">Tema, som e aviso</button><button class="link" data-restart>Ver a apresentação de novo</button></div>
+  </section>
+</main>
+
+<footer class="dots" id="dots" aria-hidden="true"></footer>
+<dialog id="dlg"><form method="dialog" class="glass"><h3 id="dlg-t"></h3><p id="dlg-p"></p><div class="cta"><button class="btn" value="nao">Cancelar</button><button class="btn accent" value="sim" id="dlg-ok">Confirmar</button></div></form></dialog>
+<script src="app.js"></script>
+</body>
+</html>

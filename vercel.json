@@ -1,0 +1,7 @@
+{
+  "buildCommand": "",
+  "installCommand": "",
+  "outputDirectory": "app/public",
+  "framework": null,
+  "cleanUrls": true
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" font-family="'IBM Plex Sans', 'Segoe UI', sans-serif">
+  <rect width="1200" height="430" fill="#1a1230"/>
+  <text x="40" y="52" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="26" font-weight="700" fill="#f6f2ff">Como um post nasce</text>
+  <text x="40" y="80" font-size="15" fill="#bdb4e2">O Claude gera. Você aprova. A API oficial publica.</text>
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#26eda0"/></marker>
+  </defs>
+  <!-- linha 1: geração -->
+  <g font-size="14" fill="#d3caec">
+    <g transform="translate(40 120)"><rect width="200" height="110" fill="#2a2259" stroke="#ece4f2" stroke-width="3"/><rect width="200" height="6" fill="#9246f9"/><text x="16" y="40" font-size="17" font-weight="600" fill="#f6f2ff">1 · Pauta</text><text x="16" y="66">Claude Code pesquisa</text><text x="16" y="86">e escreve a peça</text></g>
+    <g transform="translate(300 120)"><rect width="200" height="110" fill="#2a2259" stroke="#ece4f2" stroke-width="3"/><rect width="200" height="6" fill="#9246f9"/><text x="16" y="40" font-size="17" font-weight="600" fill="#f6f2ff">2 · Motor</text><text x="16" y="66">gera SVG com o design</text><text x="16" y="86">system (engine/)</text></g>
+    <g transform="translate(560 120)"><rect width="200" height="110" fill="#2a2259" stroke="#ece4f2" stroke-width="3"/><rect width="200" height="6" fill="#ffc640"/><text x="16" y="40" font-size="17" font-weight="600" fill="#f6f2ff">3 · Desigma</text><text x="16" y="66">o MCP põe a peça no</text><text x="16" y="86">projeto, ao vivo</text></g>
+    <g transform="translate(820 120)"><rect width="200" height="110" fill="#2a2259" stroke="#ece4f2" stroke-width="3"/><rect width="200" height="6" fill="#9246f9"/><text x="16" y="40" font-size="17" font-weight="600" fill="#f6f2ff">4 · Exporta</text><text x="16" y="66">PNG para post, PDF</text><text x="16" y="86">para carrossel</text></g>
+  </g>
+  <g stroke="#26eda0" stroke-width="3" marker-end="url(#seta)"><line x1="242" y1="175" x2="296" y2="175"/><line x1="502" y1="175" x2="556" y2="175"/><line x1="762" y1="175" x2="816" y2="175"/><path d="M920 232 V270 H140 V304" fill="none"/></g>
+  <!-- linha 2: decisão -->
+  <g font-size="14" fill="#d3caec">
+    <g transform="translate(40 306)"><rect width="200" height="96" fill="#0f0a1e" stroke="#4e4590" stroke-width="3"/><text x="16" y="38" font-size="17" font-weight="600" fill="#f6f2ff">5 · Fila</text><text x="16" y="64">prévia e legenda</text><text x="16" y="82">no painel local</text></g>
+    <g transform="translate(300 306)"><rect width="260" height="96" fill="#fff6e4" stroke="#1a1230" stroke-width="3"/><text x="16" y="38" font-size="17" font-weight="700" fill="#1a1230">6 · Você aprova</text><text x="16" y="64" fill="#3b2416">nada vai ao ar sem</text><text x="16" y="82" fill="#3b2416">o seu clique</text></g>
+    <g transform="translate(620 306)"><rect width="200" height="96" fill="#0f0a1e" stroke="#4e4590" stroke-width="3"/><text x="16" y="38" font-size="17" font-weight="600" fill="#f6f2ff">7 · LinkedIn</text><text x="16" y="64">API oficial, no horário</text><text x="16" y="82">ou na hora</text></g>
+  </g>
+  <g stroke="#26eda0" stroke-width="3" marker-end="url(#seta)"><line x1="242" y1="354" x2="296" y2="354"/><line x1="562" y1="354" x2="616" y2="354"/></g>
+  <text x="860" y="346" font-size="13" fill="#bdb4e2">Chaves, token e login</text>
+  <text x="860" y="366" font-size="13" fill="#bdb4e2">ficam só na sua máquina</text>
+  <text x="860" y="386" font-size="13" fill="#bdb4e2">(config/, fora do Git).</text>
+</svg>

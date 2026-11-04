@@ -1,0 +1,16 @@
+{
+  "_nota": "Lista de referência dos 100 temas do Daily UI (dailyui.co). O e-mail do dia é quem manda: se o tema do e-mail for outro, use o do e-mail e corrija aqui. Os desafios chegam de segunda a sexta; o dia 1 foi 2026-11-03.",
+  "inicio": "2026-11-03",
+  "temas": [
+    "Sign Up", "Credit Card Checkout", "Landing Page", "Calculator", "App Icon", "User Profile", "Settings", "404 Page", "Music Player", "Social Share",
+    "Flash Message (Error/Success)", "E-Commerce Shop (Single Item)", "Direct Messaging", "Countdown Timer", "On/Off Switch", "Pop-Up / Overlay", "Email Receipt", "Analytics Chart", "Leaderboard", "Location Tracker",
+    "Home Monitoring Dashboard", "Search", "Onboarding", "Boarding Pass", "TV App", "Subscribe", "Dropdown", "Contact Us", "Map", "Pricing",
+    "File Upload", "Crowdfunding Campaign", "Customize Product", "Car Interface", "Blog Post", "Special Offer", "Weather", "Calendar", "Testimonials", "Recipe",
+    "Workout Tracker", "ToDo List", "Food/Drink Menu", "Favorites", "Info Card", "Invoice", "Activity Feed", "Coming Soon", "Notifications", "Job Listing",
+    "Press Page", "Logo Design", "Header Navigation", "Confirm Reservation", "Icon Set", "Breadcrumbs", "Video Player", "Shopping Cart", "Background Pattern", "Color Picker",
+    "Redeem Coupon", "Workout of the Day", "Best of the Year", "Select User Type", "Notes Widget", "Statistics", "Hotel Booking", "Flight Search", "Trending", "Event Listing",
+    "Schedule", "Image Slider", "Virtual Reality", "Download App", "Pre-order", "Loading", "Thank You", "Pending Invitation", "Itinerary", "Date Picker",
+    "Status Update", "Form", "Button", "Badge", "Pagination", "Progress Bar", "Tooltip", "Avatar", "Terms of Service", "Create New",
+    "Curated for You", "FAQ", "Splash Screen", "News", "Product Tour", "Currently in Stock", "Giveaway", "Advertisement", "Categories", "Redesign Daily UI Landing Page"
+  ]
+}

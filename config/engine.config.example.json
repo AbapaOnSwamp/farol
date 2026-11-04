@@ -1,0 +1,13 @@
+{
+  "assetsDir": "examples/assets",
+  "workspaceDir": "workspace",
+  "dailyUiStart": "2026-11-03",
+  "desigma": {
+    "exe": "C:\\Programas\\desigma\\desigma.exe",
+    "mcpExe": "C:\\Programas\\desigma\\desigma-mcp.exe",
+    "workspace": "C:\\Users\\voce\\Documents\\desigma",
+    "project": "C:\\Users\\voce\\Documents\\desigma\\posts.desigma"
+  },
+  "linkedin": { "version": "202610", "redirectUri": "http://localhost:8765/callback" },
+  "app": { "port": 4800 }
+}
