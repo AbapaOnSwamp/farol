@@ -52,14 +52,21 @@ Depois disso, a **Fila** mostra cada peça com prévia e legenda.
 
 ## Começar
 Precisa de:
-- **Node 20+**;
+- **Node 20+** (só para rodar pelo terminal; o `Farol.exe` já traz o Node dentro);
 - **[Claude Code](https://docs.claude.com/en/docs/claude-code/setup)**;
 - **Microsoft Edge** (para exportar PNG e PDF);
 - **[Desigma](https://github.com/deepfounder-ai/desigma/releases)**, se quiser o projeto editável.
 
 As fontes do design system de exemplo (Space Grotesk, IBM Plex Sans, Press Start 2P, VT323 e DM Serif Display, todas do Google Fonts) precisam estar instaladas para as exportações saírem iguais.
 
-**Jeito fácil (Windows):** baixe o `.zip` na [página de releases](https://github.com/AbapaOnSwamp/farol/releases/latest), extraia e dê dois cliques em `Iniciar Farol.cmd`. Ele confere o Node e abre o app no navegador.
+**Jeito fácil (Windows):**
+1. Baixe o `Farol-windows.zip` na [página de releases](https://github.com/AbapaOnSwamp/farol/releases/latest).
+2. Extraia a pasta inteira e dê dois cliques em `Farol.exe`.
+3. O app abre na janela dele, sem barra de navegador. Fechar a janela encerra o Farol.
+
+O Windows pode mostrar o aviso "O Windows protegeu o computador", porque o exe ainda não tem assinatura digital. Clique em **Mais informações → Executar assim mesmo**.
+
+Para gerar o exe você mesmo: `npm run exe` (precisa do Node 25.5+; o ícone sai se a variável `RCEDIT` apontar para o `rcedit-x64.exe`).
 
 **Pelo terminal:**
 ```bash
